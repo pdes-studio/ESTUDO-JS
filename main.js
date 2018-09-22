@@ -90,6 +90,7 @@ function menuMobile(){
     const small = window.matchMedia('(max-width: 768px)').matches;
 
     if(small === true){
+    const menuBtnSec = document.querySelector('.btn-menu');
     const menuBtn = document.querySelector('.btn-menu a');
     const menuSec = document.querySelector('.nav-menu');
 
@@ -99,7 +100,7 @@ function menuMobile(){
       menuSec.classList.toggle('mobile');
     }
 
-    menuBtn.addEventListener('click', touchMenu);
+    menuBtnSec.addEventListener('click', touchMenu);
 }
 
 }
