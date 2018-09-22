@@ -90,12 +90,13 @@ function menuMobile(){
     const small = window.matchMedia('(max-width: 768px)').matches;
 
     if(small === true){
-    const menuBtn = document.querySelector('.btn-menu');
+    const menuBtn = document.querySelector('.btn-menu a');
     const menuSec = document.querySelector('.nav-menu');
 
     function touchMenu(event){
         event.preventDefault();
-        menuSec.classList.toggle('mobile');
+      menuBtn.classList.toggle('active')
+      menuSec.classList.toggle('mobile');
     }
 
     menuBtn.addEventListener('click', touchMenu);

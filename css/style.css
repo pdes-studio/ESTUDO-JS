@@ -128,7 +128,7 @@ body{ padding: 0; margin: 0; background: #f9f7ff;}
 	background: #7646ff;
 }
 
-.info-t{
+.js .info-t{
 	position: fixed;
 	width: 100%;
 	right: 0;
@@ -146,7 +146,7 @@ body{ padding: 0; margin: 0; background: #f9f7ff;}
 	justify-content: space-between;
 }
 
-.info-t span::after{
+.js .info-t span::after{
 	content: "MODO ALTERNATIVO (APERTE TECLA 'T')";
 	font-weight: bold;
 	display: block;
@@ -340,8 +340,24 @@ body::-webkit-scrollbar-thumb {
 		margin-top: 6px;
 		float: left;
 		clear: both;
+		transition: .3s ease;
 	}
 
+	.btn-menu a.active{
+		border-top-color: transparent;
+		transition: .3s ease;
+	}
+
+	.btn-menu a.active::before{
+		transform: rotate(140deg);
+		
+	}
+
+	.btn-menu a.active::after{
+		margin-top: -3px;
+		transform: rotate(-140deg); 
+		transition: .3s ease;
+} 
 
 	.nav-menu{
 		height: inherit;
@@ -357,10 +373,16 @@ body::-webkit-scrollbar-thumb {
 		transition: .3s ease-in-out;;
 	}
 
+	.js .info-t{
+		display: none;
+	}
+
 
 	.slide{
-		max-width: calc(100% - 120px);
+		max-width: calc(100% - 10px);
 		padding-top: 100px;
+		padding-left: 20px;
+		padding-right: 20px; 
 		margin: 0 auto;
 	}
 
